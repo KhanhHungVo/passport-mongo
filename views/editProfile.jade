@@ -1,0 +1,13 @@
+html
+  head
+    title=title
+    link(href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css', rel='stylesheet')
+  body
+    div.container
+      div.jumbotron
+          label User Name
+          input(value="#{user.username}" type="text") 
+          label Password
+          input(value="#{user.password}" type="text")
+          img(class="img-thumbnail" src="/images/#{user.avatar}")
+         

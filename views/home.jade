@@ -1,0 +1,24 @@
+html
+  head
+    title=title
+    link(href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css', rel='stylesheet')
+  body
+    div.container
+      div.jumbotron
+        h1 Hello!
+ 
+        if user
+          img(class="img-thumbnail" src="/images/#{user.avatar}")
+          p Welcome, #{user.username}
+          p
+            a.small(href="/editProfile") Edit my profile
+          form(action='/signout', method='GET')
+            button.btn.btn-default(type="submit") Logout
+        else
+          p Welcome to my app, ready to get started?
+          p
+            a.btn.btn-primary(href="/signin") Login now
+          p
+            span.small Don't have an account?
+            span &nbsp;
+            a.small(href="/signup") Register now
